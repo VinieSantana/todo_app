@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dgy-X9-z12">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Table View Controller-->
+        <scene sceneID="WRP-x9-b4c">
+            <objects>
+                <tableViewController id="dgy-X9-z12" customClass="HomeTableViewController" customModule="todo_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="J5t-IG-uVH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" name="Default Background"/>
+                        <button key="tableHeaderView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Oq-7Y-x36">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" name="Default Button Background"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <state key="normal" title="Nova Tarefa">
+                                <color key="titleColor" name="Default Button Text"/>
+                            </state>
+                            <connections>
+                                <action selector="newTodo:" destination="dgy-X9-z12" eventType="touchUpInside" id="EeY-sw-uHE"/>
+                            </connections>
+                        </button>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="105" id="t9U-Sg-eCc" customClass="TodoTableViewCell" customModule="todo_app" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="105"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="t9U-Sg-eCc" id="3Z2-gX-x6B">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="105"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bo6-XW-qKo">
+                                            <rect key="frame" x="0.0" y="0.0" width="40" height="105"/>
+                                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="105" id="Q0V-TT-Hlw"/>
+                                                <constraint firstAttribute="width" constant="40" id="bqq-wK-Z7m"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFu-As-1uB">
+                                            <rect key="frame" x="60" y="26" width="52" height="24"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lOf-aN-Bf3">
+                                            <rect key="frame" x="60" y="62" width="36" height="17"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="bo6-XW-qKo" firstAttribute="leading" secondItem="3Z2-gX-x6B" secondAttribute="leading" id="03v-kw-v2M"/>
+                                        <constraint firstAttribute="bottom" secondItem="bo6-XW-qKo" secondAttribute="bottom" id="5lp-gA-qe3"/>
+                                        <constraint firstItem="rFu-As-1uB" firstAttribute="leading" secondItem="bo6-XW-qKo" secondAttribute="trailing" constant="20" id="GXU-7m-uq4"/>
+                                        <constraint firstItem="bo6-XW-qKo" firstAttribute="top" secondItem="3Z2-gX-x6B" secondAttribute="top" id="Pwz-Xa-Ple"/>
+                                        <constraint firstItem="rFu-As-1uB" firstAttribute="top" secondItem="3Z2-gX-x6B" secondAttribute="topMargin" constant="15" id="Zqc-Nz-Ivq"/>
+                                        <constraint firstItem="lOf-aN-Bf3" firstAttribute="leading" secondItem="bo6-XW-qKo" secondAttribute="trailing" constant="20" id="gyV-nl-k76"/>
+                                        <constraint firstItem="lOf-aN-Bf3" firstAttribute="top" secondItem="rFu-As-1uB" secondAttribute="bottom" constant="12" id="r3f-2O-HU6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lbTodoDate" destination="lOf-aN-Bf3" id="dbx-td-31u"/>
+                                    <outlet property="lbTodoName" destination="rFu-As-1uB" id="Rwt-Vh-gfQ"/>
+                                    <outlet property="todoStatusView" destination="bo6-XW-qKo" id="vbB-LL-zbZ"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="dgy-X9-z12" id="Lrc-TC-J4K"/>
+                            <outlet property="delegate" destination="dgy-X9-z12" id="Jg5-pC-lKf"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="kRp-Rg-DBK"/>
+                    <connections>
+                        <outlet property="newTodoButton" destination="0Oq-7Y-x36" id="DNa-Qt-MGk"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="amU-Sw-BUy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="437.68115942028987" y="-239.0625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="Default Background">
+            <color red="0.55400002002716064" green="0.68800002336502075" blue="0.76599997282028198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Default Button Background">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Default Button Text">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
